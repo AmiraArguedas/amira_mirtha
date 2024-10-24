@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+#rutas
 urlpatterns = [
     path('guests/', views.GuestListCreate.as_view(), name='guest-list'),
     path('guests/<int:pk>/', views.GuestDetail.as_view(), name='guest-detail'),
