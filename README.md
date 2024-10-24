@@ -9,8 +9,15 @@ http://localhost:8000/api/reservations/
 http://localhost:8000/api/reviews/
 
 Para poder consultar a los endpoints protegidos:
+http://127.0.0.1:8000/api/token/ 
+# Hacemos un post y en body se envian los datos de ingreso para obtener el access del super-usuario y poder acceder a la ruta protegida con el JWT
 
+{
+    "username": "...",
+    "password": "..."
+}
 
+# Vamos a obtener una respuesta que contiene el token de acceso y este lo debemos enviar (en Authorization) cada vez que hagamos una consulta a los endpoints protegidos 
 #Realizacion de consultas a los endpoints
 
 ##################Endpoint Guest#################################
@@ -43,7 +50,6 @@ En el body debemos enviar los siguientes datos en formato Json
 
 # delete 
 http://localhost:8000/api/guests/1   # Debemos especificar el id 
-
 
 
 
